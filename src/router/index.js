@@ -7,6 +7,7 @@ import News from '../components/news/news'
 import Zxfuda from '../components/zxfuda/zxfuda'
 import About from '../components/about/about'
 import Join from '../components/join/join'
+import NewsDetails from '../components/news/newsDetails'
 
 // 安装element-ui 组件库
 import ElementUI from 'element-ui'
@@ -45,6 +46,11 @@ export default new Router({
 			path: '/news',
 			name: 'news',
 			component: News
+		},
+		{
+			path: '/newsDetails',
+			name: 'newsDetails',
+			component: NewsDetails
 		},
 		{
 			path: '/zxfuda',

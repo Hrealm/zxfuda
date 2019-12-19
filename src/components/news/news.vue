@@ -25,7 +25,9 @@
                                 <b class="news-date">{{item.fReleaseTime | releaseTime}}</b>
                                 <h2 class="news-title">{{item.fTitle}}</h2>
                                 <p class="news-tags">{{item.fTags}}</p>
-                                <span class="news-more">MORE</span>
+                                <router-link :to="{name:'newsDetails', query:{id:item.fId}}">
+                                    <span class="news-more">MORE</span>
+                                </router-link>
                             </div>
                         </div>
                     </li>
@@ -49,14 +51,14 @@ export default {
     data() {
         return {
             newsList: [],
-            obj: {}
+            // obj: {}
         };
     },
     created(){
         let url = 'http://192.168.0.114:8085/zxwebsite//zxnews/content/manager/newsList?page=1&pagesize=6'
         this.axios.get(url).then(res => {
             this.newsList = res.data.Rows;
-            this.obj = this.newsList[0];
+            // this.obj = this.newsList[0];
             // console.log(this.obj.fImage);
         })
     },
@@ -157,6 +159,10 @@ export default {
                                color: #999;
                                font-size: 18px;
                                line-height: 26px;
+                           }
+                           a{
+                               display: block;
+                               width: 80px;
                            }
                            .news-more{
                             //    display: none;
