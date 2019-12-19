@@ -126,9 +126,9 @@ export default {
                     color: #ccc;
                     text-align: center;
                     margin-bottom: 20px;
-                    .news-date{
-                        vertical-align: middle;
-                    }
+                    // .news-date{
+                    //     vertical-align: middle;
+                    // }
                 }
                 .news-article{
                     line-height: 36px;
