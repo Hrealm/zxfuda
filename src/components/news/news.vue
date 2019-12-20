@@ -36,6 +36,13 @@
                     <h2>新闻动态</h2>
                     <h3>logistics redefined</h3>
                 </div>
+                <!-- 分页请求 -->
+                <div class="news-pagination">
+                    <el-pagination
+                        layout="prev, pager, next"
+                        :total="50">
+                    </el-pagination>
+                </div>
             </div>
         </div>
         <!-- latest news end -->
@@ -70,6 +77,8 @@ export default {
     }
 };
 </script>
+
+
 
 <style scoped lang="scss">
 .container{
@@ -273,6 +282,10 @@ export default {
                     transform: scale(1, 1.5);
                     // letter-spacing: 2px;
                 }
+            }
+            .news-pagination{
+                margin: 50px 0;
+                text-align: center;
             }
         }
     }
