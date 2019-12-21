@@ -136,6 +136,49 @@
         </div>
         <!-- Team introduce end-->
 
+        <!-- 新增 -->
+        <!-- 资质荣誉 -->
+        <!-- honor begin -->
+        <div class="company-culture">
+            <div class="max1200">
+                <div class="culture-title">
+                    <img src="/static/img/about-icont3-1.png" alt="" width="170">
+                </div>
+                <div class="culture-content">
+                    <superslide :options="cultureOptions" class="slideBox">
+                        <div class="culture-bd">
+                            <ul>
+                                <li>
+                                    <div class="company-box">
+                                        <img src="/static/img/honor1.png" width="100%" height="281px"/>
+                                        <h3>计算机软件著作权</h3>
+                                        <!-- <p>客户至上 服务为先 效率第一</p> -->
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="company-box">
+                                        <img src="/static/img/honor2.png" width="100%" height="281px"/>
+                                        <h3>广东省物流行业协会会员单位</h3>
+                                        <!-- <p>一流团队 一流服务 一流品牌</p> -->
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="company-box">
+                                        <img src="/static/img/honor3.png" width="100%" height="281px"/>
+                                        <h3>增值电信业务经营许可证</h3>
+                                        <!-- <p>勤勉务实 专注创新 信任担当</p> -->
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </superslide>
+                </div>
+            </div>
+        </div>
+        <!-- honor end -->
+
+
+
         <!-- 联系我们 -->
         <!-- contact us begin -->
         <div class="contact-us">
@@ -158,6 +201,7 @@
             </div>
         </div>
         <!-- contact us end -->
+
     </div>
 </template>
 
@@ -377,7 +421,8 @@ export default {
     // 联系我们
     .contact-us{
         width: 100%;
-        background-color: #F4F5F9;
+        // background-color: #F4F5F9;
+        background-color: #fff;
         padding: 80px 0 80px;
         .max1200{
             width: 1200px;
@@ -386,7 +431,8 @@ export default {
                 width: 25%;
                 padding: 30px 30px;
                 background: rgba(255,255,255,0.5);
-                box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.05);
+                // box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.05);
+                box-shadow: 0px 3px 15px 0px rgba(0,0,0,0.1);
                 border-radius: 5px;
                 .contact-title{
                     text-align: center;

@@ -3,6 +3,7 @@
     padding: 0;
 }
 html,body{
+    min-width: 1200px;
     height: 100%;
 }
 body{

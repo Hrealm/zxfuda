@@ -24,7 +24,6 @@
                     </p>
                     <div class="news-article" v-html="newsDetails.fContent"></div>
                 </div>
-                
             </div>
         </div>
         <!-- news end -->
@@ -78,7 +77,6 @@ export default {
             margin: 0 auto;
             .news-back{
                 height: 77px;
-                // border-bottom: 1px solid #eaeaea;
                 p{
                     height: 77px;
                     line-height: 77px;
@@ -102,6 +100,7 @@ export default {
                         width: 15px;
                         height: 15px;
                         // background-size: 100%;
+                        
                     }
                     .news-title{
                         margin-left: 5px;
@@ -132,9 +131,6 @@ export default {
                 }
                 .news-article{
                     line-height: 36px;
-                    // p{
-                    //     line-height: 34px;
-                    // }
                 }
             }
         }

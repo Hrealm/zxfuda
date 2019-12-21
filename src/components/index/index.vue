@@ -46,8 +46,8 @@
                     <h3 class="inn-desc-title">Innovation.</h3> -->
                     <p class="inn-desc-content">秉承共创、共享、共赢的经营理念，中象福达联合广大物流企业和物流园区，共同打造以整车运营为核心业务、以信息科技为智能纽带、以资源效率为配置目标的智慧物流信息平台，从物流运作、物流管理以及物流组织等方面提升物流业的发展水平，推动整车物流智能化、自动化、规范化发展。
                     </p>
-                    <h3 class="inn-desc-fooder">发物流 找中象福达</h3>
-                    <P class="inn-desc-slogan">快、好、省</P>
+                    <h3 class="inn-desc-fooder">货运  发整车</h3>
+                    <P class="inn-desc-slogan"> 找中象福达</P>
                 </div>
                 <div class="innovation-right fr">
                     <ul class="clearFix">

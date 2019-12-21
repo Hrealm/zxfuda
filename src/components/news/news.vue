@@ -23,7 +23,9 @@
                             </div>
                             <div class="news-content fl">
                                 <b class="news-date">{{item.fReleaseTime | releaseTime}}</b>
+                                <!-- <router-link :to="{name:'newsDetails', query:{id:item.fId}}"> -->
                                 <h2 class="news-title">{{item.fTitle}}</h2>
+                                <!-- </router-link>     -->
                                 <p class="news-tags">{{item.fTags}}</p>
                                 <router-link :to="{name:'newsDetails', query:{id:item.fId}}">
                                     <span class="news-more">MORE</span>
@@ -32,23 +34,29 @@
                         </div>
                     </li>
                 </ul>
+                <!-- 新闻动态 -->
                 <div class="news-dynamic">
                     <h2>新闻动态</h2>
                     <h3>logistics redefined</h3>
                 </div>
                 <!-- 分页请求 -->
                 <div class="news-pagination">
-                    <el-pagination
+                    <!-- <el-pagination
                         layout="prev, pager, next"
                         :total="50">
+                    </el-pagination> -->
+                    <el-pagination
+                        background
+                        @current-change = "currentChange"
+                        @prev-click = 'prevClick'
+                        @next-click = 'nextClick'
+                        layout="prev, pager, next"
+                        :total='total'>
                     </el-pagination>
                 </div>
             </div>
         </div>
         <!-- latest news end -->
-
-        <!-- 新闻动态 -->
-        <!-- logistics redefined -->
 
     </div>
 </template>
@@ -58,21 +66,51 @@ export default {
     data() {
         return {
             newsList: [],
-            // obj: {}
+            total: null,
+            pageSize: 6
         };
     },
     created(){
-        let url = 'http://192.168.0.114:8085/zxwebsite//zxnews/content/manager/newsList?page=1&pagesize=6'
+        let url = 'http://192.168.0.114:8085/zxwebsite//zxnews/content/manager/newsList?page=1&pagesize=' + this.pageSize;
         this.axios.get(url).then(res => {
             this.newsList = res.data.Rows;
-            // this.obj = this.newsList[0];
-            // console.log(this.obj.fImage);
+            this.total = res.data.Total;
+            // console.log(this.newsList);
         })
     },
     components: {},
     filters: {
         releaseTime: function(time){
             return time.substring(0,10);
+        }
+    },
+    methods: {
+        // 当前页面
+        currentChange(val){
+            this.pageSize = 6 * val;
+            this.getNewsContent();
+        },
+
+        // 上一页
+        prevClick(){
+            this.pageSize -= 6;
+            this.getNewsContent();
+        },
+        // 下一页
+        nextClick(){
+            this.pageSize += 6;
+            this.getNewsContent();
+        },
+        // 获取新闻列表
+        getNewsContent(){
+            let url = 'http://192.168.0.114:8085/zxwebsite//zxnews/content/manager/newsList?page=1&pagesize=' + this.pageSize;
+            this.axios.get(url).then(res => {
+                let array = res.data.Rows;
+                if(this.pageSize !== 6) array.splice(0,this.pageSize-6);
+                this.newsList = array;
+            })
+            document.body.scrollTop = 500;
+            document.documentElement.scrollTop = 500;
         }
     }
 };
@@ -284,10 +322,21 @@ export default {
                 }
             }
             .news-pagination{
-                margin: 50px 0;
+                margin: 40px 0 40px;
                 text-align: center;
             }
         }
     }
+}
+</style>
+
+<style lang="scss">
+.el-pagination.is-background .el-pager li:not(.disabled).active {
+    background-color: #0875FF;
+    color: #ffffff !important;
+}
+.el-pager li.active::before {
+    content: '';
+    width: 0 !important;
 }
 </style>
