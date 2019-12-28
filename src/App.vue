@@ -58,7 +58,7 @@
 				<div class="footer-left fl">
 					<div class="com-logoInfo clearFix">
 						<h1 class="logo fl"></h1>
-						<h1 class="QRcode fr"></h1>
+						<h1 class="QRcode"></h1>
 						<div class="bigQRcode"></div>
 					</div>
 					<p class="com-info">全国24小时服务调度</p>
@@ -66,17 +66,17 @@
 					<p class="com-info">大数据决策分析赋能</p>
 					<p class="com-hotline">招商热线：<span>400-666-7056</span> 转 2</p>
 				</div>
-				<div class="footer-right clearFix fl">
+				<div class="footer-right clearFix fr">
 					<div class="footer-zxfd fl">
 						<h3>中象福达</h3>
-						<p><a href="javascript:;">产品介绍</a></p>
+						<p><router-link @click.native="Merchants('top')" :to="{name: 'product'}" active-class="">产品介绍</router-link></p>
 						<p><a href="javascript:;">在线咨询</a></p>
-						<p><a href="javascript:;">招商加盟</a></p>
+						<p><router-link @click.native="Merchants('bottom')" :to="{name: 'product'}" active-class="">招商加盟</router-link></p>
 					</div>
 					<div class="footer-about fl">
 						<h3>关于我们</h3>
-						<p><a href="javascript:;">关于我们</a></p>
-						<p><a href="javascript:;">加入我们</a></p>
+						<p><router-link :to="{name: 'about'}" active-class="">关于我们</router-link></p>
+						<p><router-link :to="{name: 'join'}" active-class="">加入我们</router-link></p>
 					</div>
 					<div class="footer-contact fr">
 						<h3>联系我们</h3>
@@ -96,7 +96,18 @@
 
 <script>
 export default {
-    name: "App"
+	name: "App",
+	methods: {
+		Merchants(location){
+			if(location === 'bottom'){
+				document.body.scrollTop = 5000;
+				document.documentElement.scrollTop = 5000;
+			}else{
+				document.body.scrollTop = 0;
+            	document.documentElement.scrollTop = 0;
+			}
+		}
+	}
 };
 </script>
 
@@ -210,30 +221,45 @@ footer{
 					background-size: 100%;
 				}
 				.QRcode{
+					position: absolute;
+					top: 5px;
+					left: 193px;
+					opacity: 1;
 					width: 40px;
 					height: 40px;
-					margin: 5px 13px;
+					// margin: 5px 13px;
 					background: url('./assets/icon_qrcode.png') no-repeat;
 					background-size: 100%;
 					border-radius: 2px;
-					cursor: pointer;
+					transition: all .4s;
 				}
 				.bigQRcode{
 					opacity: 0;
 					position: absolute;
-					top: -100px;
-					right: -20px;
-					width: 100px;
-					height: 100px;
+					top: 5px;
+					left: 193px;
+					width: 40px;
+					height: 40px;
 					background: url('./assets/erweima.png') no-repeat;
 					background-size: 100%;
-					border-radius: 5px;
+					border-radius: 8px;
+					transition: all .4s;
+
 				}
-				// .QRcode:hover .logo{
-					// opacity: 1;
-					// top: -150px;
-					// width: 50px;
-				// }
+			}
+			.com-logoInfo:hover .QRcode{
+				width: 100px;
+				height: 100px;
+				opacity: 0;
+				transition: all .4s;
+			}
+			.com-logoInfo:hover .bigQRcode{
+				width: 100px;
+				height: 100px;
+				opacity: 1;
+				transition: all .4s;
+				transition-timing-function: cubic-bezier(0, 0.2, 0.8, 1);
+
 			}
 			.com-info{
 				color: #fff;
@@ -250,7 +276,7 @@ footer{
 		}
 		.footer-right{
 			width: 70%;
-			margin-left: 110px;
+			// margin-left: 110px;
 			color: #fff;
 			h3{
 				font-weight: normal;

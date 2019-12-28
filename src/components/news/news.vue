@@ -27,7 +27,7 @@
                                 <h2 class="news-title">{{item.fTitle}}</h2>
                                 <!-- </router-link>     -->
                                 <p class="news-tags">{{item.fTags}}</p>
-                                <router-link :to="{name:'newsDetails', query:{id:item.fId}}">
+                                <router-link :to="{name:'newsDetails', query:{id:item.fId}}" active-class="">
                                     <span class="news-more">MORE</span>
                                 </router-link>
                             </div>

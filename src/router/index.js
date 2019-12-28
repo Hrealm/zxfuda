@@ -15,13 +15,16 @@ import 'element-ui/lib/theme-chalk/index.css'
 Vue.use(ElementUI);
 
 // 安装vue-superslide
-// import Vue from 'vue'
 import VueSuperSlide from 'vue-superslide'
 Vue.use(VueSuperSlide);
 
 // 导入插件axios 挂载属性
 import Axios from 'axios'
 Vue.prototype.axios = Axios;
+
+// 安装 vue-parallax-js
+// import VueParallax from 'vue-parallax-js'
+// Vue.use(VueParallax);
 
 Vue.use(Router)
 

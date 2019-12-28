@@ -15,8 +15,10 @@
         <div class="company-des">
             <div class="max1200 clearFix">
                 <div class="company-left fl">
-                    <div class="company-symbol" id="js-scene">
-                        <img src="/static/img/index6.png" alt="" width="100%">
+                    <div class="company-symbol" id="js-scene" >
+                        <div data-depth="0.35">
+                            <img src="/static/img/index6.png" alt="" width="100%">
+                        </div>
                     </div>
                 </div>
                 <div class="company-right fr">
@@ -53,21 +55,25 @@
                     <ul class="clearFix">
                         <li class="fl">
                             <div class="item-cover">
-                                <img src="/static/img/cover1.jpg" alt="" width="100%" height="100%">
+                                <router-link :to="{name: 'newsDetails', query:{id: '271'}}" active-class="">
+                                    <img src="/static/img/cover1.jpg" alt="">
+                                </router-link>
                             </div>
                             <h3 class="item-title">年度创新引领奖</h3>
                             <p class="item-content">中象福达作为“互联网+”企业代表受邀参加本次峰会，并荣膺“2019年度创新引领奖”。
                             </p>
-                            <div class="item-more">详情</div>
+                            <div class="item-more"><router-link :to="{name: 'newsDetails', query:{id: '271'}}" active-class="">详情</router-link></div>
                         </li>
                         <li class="fr">
                             <div class="item-cover">
-                                <img src="/static/img/cover2.jpg" alt="" width="100%" height="100%">
+                                <router-link :to="{name: 'newsDetails', query:{id: '243'}}" active-class="">
+                                    <img src="/static/img/cover2.jpg" alt="">
+                                </router-link>
                             </div>
                             <h3 class="item-title">物流业重新定义</h3>
                             <p class="item-content">通过互联网大数据、云计算、物联网等信息技术与手段，让科技为物流赋能，促进互联网和整车物流的深度融合。
                             </p>
-                            <div class="item-more">详情</div>
+                            <div class="item-more"><router-link :to="{name: 'newsDetails', query:{id: '243'}}" active-class="">详情</router-link></div>
                         </li>
                     </ul>
                 </div>
@@ -89,11 +95,11 @@
                         <p class="descContent">公司坚持技术与业务双轮驱动、线上与线下协同联动、积极整合货运产业链上下游资源，本着以客户至上、效率优先、服务为王的经营宗旨和勇创“一流团队、一流服务、一流品牌”的企业精神，以开放、创新、合作、务实的崭新姿态积极为客户创造价值、助力公路货运行业降本增效！
                         </p>
                     </div>
-                    <div class="zxfd-more">关于中象</div>
+                    <div class="zxfd-more"><router-link :to="{name: 'about'}" active-class="">关于中象</router-link></div>
                 </div>
                 <div class="zxfd-right fr">
                     <div class="zxfd-symbol">
-                        <img src="/static/img/index2.jpg" alt="" width="100%">
+                        <img src="/static/img/index2.jpg" alt="">
                     </div>
                 </div>
             </div>
@@ -122,13 +128,18 @@
 </template>
 
 <script>
+import Parallax from 'parallax-js'
 export default {
     data() {
         return {
             bannerImg: ['/static/img/indexbanner.jpg','/static/img/indexbanner.jpg','/static/img/indexbanner.jpg']
         };
     },
-    components: {}
+    components: {},
+    mounted(){
+        var scene = document.getElementById('js-scene');
+        var parallaxInstance = new Parallax(scene);
+    }
 };
 </script>
 
@@ -237,13 +248,31 @@ export default {
                         width: 275px;
                         // margin-right: 25px;
                         .item-cover{
-                            // width: 250px;
+                            width: 275px;
+                            height: 155px;
                             border-radius: 6px;
+                            overflow: hidden;
+                            a{
+                                display: block;
+                                width: 100%;
+                                height: 100%;
+                            }
                             img{
+                                width: 100%;
+                                height: 100%;
                                 border-radius: 6px;
+                                transition: all .5s;
+                            }
+                        }
+                        .item-cover:hover{
+                            img{
+                                width: 108%;
+                                height: 108%;
+                                transition: all .5s;
                             }
                         }
                         .item-title{
+                            margin-top: 5px;
                             font-size: 16px;
                             color: #141a88;
                             line-height: 34px;
@@ -265,6 +294,12 @@ export default {
                             cursor: pointer;
                             font-size: 10px;
                             transition: .2s all;
+                            a{
+                                display: block;
+                                width: 100%;
+                                height: 100%;
+                                color: inherit;
+                            }
                         }
                         .item-more:hover{
                             border-radius: 5px;
@@ -317,6 +352,12 @@ export default {
                     cursor: pointer;
                     font-size: 10px;
                     transition: .2s all;
+                    a{
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                        color: inherit;
+                    }
                 }
                 .zxfd-more:hover{
                     border-radius: 5px;
@@ -325,14 +366,25 @@ export default {
             .zxfd-right{
                 width: 600px;
                 .zxfd-symbol{
+                    width: 600px;
+                    height: 438px;
+                    overflow: hidden;
                     border-radius: 5px;
+                    transition: .2s all;
+                    box-shadow: 1px 1px 8px #BBB;
                     img{
+                        width: 100%;
                         border-radius: 5px;
-                        transition: .2s all;
-                        box-shadow: 1px 1px 8px #BBB;
+                        transition: all .5s;
                     }
-                    img:hover{
-                        box-shadow: 5px 5px 13px #BBB;
+                }
+                .zxfd-symbol:hover{
+                    transition: all .2s;
+                    // box-shadow: 5px 5px 13px #BBB;
+                    box-shadow: 8px 10px 13px #BBB;
+                    img{
+                        width: 105%;
+                        transition: all .5s;
                     }
                 }
             }
