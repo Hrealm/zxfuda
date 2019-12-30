@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"> 
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>中象福达-发钱啦</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html,body{
+            height: 100%;
+        }
+        .wrap,.bg{
+            width: 100%;
+            font-size: 0;
+        }
+        .wrap{
+            position: relative;
+        }
+        .bg{
+            position: absolute;
+            z-index: -1;
+        }
+        .content{
+            width: 100%;
+            padding-top: .25rem;
+        }
+        .content .logo{
+            padding-left: .25rem;
+            width: 3rem;
+            /* height: 1rem; */
+        }
+        .content .title{
+            padding-left: .3rem;
+            padding-top: .3rem;
+            width: 8rem;
+        }
+        .content .car{
+            position: absolute;
+            top: 4.7rem;
+            right: .1rem;
+            width: 6.2rem;
+        }
+        .content .activity-time{
+            width: 5.5rem;
+            padding-top: 5.3rem;
+            margin: 0 auto;
+        }
+        .content .QRcode{
+            padding-top: .54rem;
+            padding-left: .18rem;
+            width: 2rem;
+            margin: 0 auto;
+        }
+        .content .process{
+            padding-top: 1.4rem;
+            width: 8rem;
+            margin: 0 auto;
+        }
+        .content .gift .gift-left{
+            display: inline-block;
+            width: 2.7rem;
+            padding-top: 2.7rem;
+            padding-left: 1.3rem;
+            text-align: center;
+        }
+        .content .gift .gift-left .gift1{
+            width: 2.5rem;
+            margin: 0 auto;
+            margin-bottom: .33rem;
+        }
+        .content .gift .gift-right{
+            display: inline-block;
+            width: 5rem;
+            /* padding-top: 2.5rem; */
+            margin-left: 1rem;
+            /* text-align: center; */
+        }
+        .content .gift .gift-right .gift2{
+            position: relative;
+            width: 2.5rem;
+            /* margin: 0 auto; */
+            margin-left: .2rem;
+            margin-bottom: .25rem;
+        }
+        .content .gift .gift-right .gift2 .X{
+            position: absolute;
+            top: 50%;
+            right: -0.7rem;
+        }
+        .content .gift .gift-right .gift2 .N{
+            position: absolute;
+            top: 36%;
+            right: -1.8rem;
+        }
+        .content .gift-plus{
+            position: relative;
+        }
+        .content .gift-plus .giftPlus-left{
+            display: inline-block;
+            width: 2.5rem;
+            padding-top: 3.2rem;
+            padding-left: 1.3rem;
+        }
+        .content .gift-plus .giftPlus-right{
+            position: absolute;
+            right: .6rem;
+            bottom: -.5rem;
+            width: 5rem;
+            padding-top: .2rem;
+            /* margin-left: .6rem; */
+        }
+        .content .gift-plus .giftPlus-right .title{
+            width: 3rem;
+            padding-left: 0.1rem;
+        }
+        .content .rule{
+            width: 100%;
+            padding-top: .9rem;
+        }
+        .content .rule .rule-title{
+            width: 3rem;
+            margin: 0 auto;
+        }
+        .content .rule .rule-txt{
+            padding:.5rem;
+            /* font-size: 12px;
+            color: #FF0000; */
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="bg">
+            <img src="./images/bg.jpg" alt="" width="100%">
+        </div>
+        <div class="content">
+            <div class="logo">
+                <img src="./images/logo.png" alt="" width="100%">
+            </div>
+            <div class="title">
+                <img src="./images/title.png" alt="" width="100%">
+            </div>
+            <div class="car">
+                <img src="./images/car.png" alt="" width="100%">
+            </div>
+            <div class="activity-time">
+                <img src="./images/activity-time.png" alt="" width="100%">
+            </div>
+            <div class="QRcode">
+                <img src="./images/huozhu.png" alt="" width="100%">
+            </div>
+            <div class="process">
+                <img src="./images/process.png" alt="" width="100%" >
+            </div>
+            <div class="gift">
+                <div class="gift-left">
+                    <div class="gift1">
+                        <img src="./images/gift1.png" alt="" width="100%">
+                    </div>
+                    <img src="./images/gift-left.png" alt="" width="100%">
+                    <img src="./images/gift-left-txt.png" alt="" width="80%" style="padding-top: .3rem;">
+                </div>
+                <div class="gift-right">
+                    <div class="gift2">
+                        <img src="./images/gift2.png" alt="" width="100%">
+                        <img class="X" src="./images/X.png" alt="" width="15%">
+                        <img class="N" src="./images/N.png" alt="" width="40%">
+                    </div>
+                    <img src="./images/gift-right.png" alt="" width="70%">
+                    <img src="./images/gift-right-txt.png" alt="" width="75%" style="padding-top: .3rem;">
+                </div>
+            </div>
+            <div class="gift-plus">
+                <div class="giftPlus-left">
+                    <img src="./images/gift3.png" alt="" width="100%">
+                </div>
+                <div class="giftPlus-right">
+                    <div class="title">
+                        <img src="./images/giftPlus-title.png" alt="" width="90%">
+                    </div>
+                    <img src="./images/giftPlus-content.png" alt="" width="100%" style="padding-top: .5rem;">
+                </div>
+            </div>
+            <div class="rule">
+                <div class="rule-title">
+                    <img src="./images/rule-title.png" alt="" width="100%">
+                </div>
+                <div class="rule-txt">
+                    <!-- <p>1、活动期间，新老用户通过中象福达货主APP完成不同任务即可获相应奖励，奖励将以微信红包形式发放；</p>
+                    <p>2、本次活动以周为统计周期，每周的奖励将在下周的周三由平台客服统一联系发放；</p>
+                    <p>3、活动期间，如存在违规行为，一经核实，中象福达有权取消其获奖资格；</p>
+                    <p>4、中象福达对本次活动有最终解释权。</p> -->
+                    <img src="./images/rule-txt.png" alt="" width="100%">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        (function(){
+            var html = document.getElementsByTagName('html')[0];
+            var nowWidth = html.getBoundingClientRect().width;
+            if(nowWidth >= 750) nowWidth = 750;
+            html.style.fontSize = nowWidth / 10 + 'px';
+        })()    
+    </script>
+</body>
+</html>
