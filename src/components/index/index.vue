@@ -148,6 +148,7 @@ export default {
 .container{
     .banner{
         width: 100%;
+        margin-top: -1px;
         .el-carousel__arrow{
             width: 36px;
             height: 80px;
@@ -421,7 +422,77 @@ export default {
             }
         }
     }
-
 }
+
+// 移动端适配
+@media screen and (max-width: 760px){
+    .container{
+        .company-des{
+            .max1200{
+                width: 1100px;
+                padding: 0 50px;
+                .company-left{
+                    width: 550px;
+                }
+                .company-right{
+                    width: 500px;
+                }
+            }
+        }
+        .company-innovation{
+            .max1200{
+                width: 1100px;
+                padding: 0 50px;
+                .innovation-left{
+                    width: 500px;
+                }
+                .innovation-right{
+                    width: 550px;
+                    ul{
+                        li{
+                            width: 260px;
+                            .item-cover{
+                                img{
+                                    width: 260px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .zxfd-des{
+            .max1200{
+                width: 1100px;
+                padding: 0 50px;
+                .zxfd-left{
+                    width: 500px;
+                }
+                .zxfd-right{
+                    width: 550px;
+                    .zxfd-symbol{
+                        width: 550px;
+                        height: 400px;
+                    }
+                }
+            }
+        }
+        .com-position{
+            .max1200{
+                width: 1100px;
+                padding: 0 50px;
+                .position-left{
+                    width: 550px;
+                }
+                .position-right{
+                    width: 550px;
+                }
+            }
+        }
+    }
+}
+
+
+
 
 </style>

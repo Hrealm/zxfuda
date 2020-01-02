@@ -799,4 +799,33 @@ export default {
         }
     }
 }
+
+
+// 移动端适配
+@media screen and (max-width: 760px){
+    .container{
+        // .banner{
+            // margin-top: -2px;
+        // }
+        .campus-content{
+            .campus-process{
+                width: 1100px;
+            }
+            .campus-stroke{
+                width: 1100px;
+            }
+            .campus-post{
+                width: 1100px;
+            }
+        }
+        .social-content{
+            .social-jobs{
+                width: 1100px;
+            }
+        }
+        .submit-resume{
+            width: 1100px;
+        }
+    }
+}
 </style>

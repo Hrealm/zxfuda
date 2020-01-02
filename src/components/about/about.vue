@@ -456,4 +456,56 @@ export default {
         }
     }
 }
+
+// 移动端适配
+@media screen and (max-width: 760px){
+    .container{
+        .platform{
+            .max1200{
+                width: 1100px;
+                .platform-info{
+                    width: 500px;
+                }
+            }
+        }
+        .company-culture{
+            .max1200{
+                width: 1100px;
+            }
+        }
+        .team-introduce{
+            .max1200{
+                width: 1100px;
+                .team-content{
+                    .team-slideBox{
+                        width: 940px;
+                        .tempWrap{
+                            width: 940px;
+                            ul{
+                                li{
+                                    .description{
+                                        width: 505px;
+                                        margin-left: 60px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .contact-us{
+            .max1200{
+                width: 1100px;
+                .conpany-map{
+                    iframe{
+                        width: 710px;
+                        height: 403px;
+                    }
+                }
+            }
+        }
+    }
+    
+}
 </style>

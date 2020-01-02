@@ -386,4 +386,40 @@ export default {
         background: url('../../assets/merchants.jpg') no-repeat top center #040530;
     }
 }
+
+
+// 移动端适配
+@media screen and (max-width: 760px){
+    .container{
+        .banner{
+            height: 356px;
+        }
+        .product-content{
+            .max1200{
+                .conIfo{
+                    width: 1100px;
+                }
+                .conApp{
+                    .max1200{
+                        width: 1100px;
+                        .conApp-left{
+                            width: 468px;
+                        }
+                        .conApp-right{
+                            width: 550px;
+                            .dow-QRcode{
+                                .QRcode{
+                                    width: 260px;
+                                }
+                                .app-version{
+                                    width: 260px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 </style>

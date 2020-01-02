@@ -22,7 +22,7 @@
 						</li>
 						<li>
 							<!-- <router-link :to="{name: 'zxfuda'}"> -->
-							<a href="javascript:;"><span>中象福达</span></a>
+							<a href="http://www.gdzxjy.net.cn/" target="_blank"><span>中象福达</span></a>
 							<!-- </router-link> -->
 						</li>
 						<li>
@@ -70,7 +70,7 @@
 					<div class="footer-zxfd fl">
 						<h3>中象福达</h3>
 						<p><router-link @click.native="Merchants('top')" :to="{name: 'product'}" active-class="">产品介绍</router-link></p>
-						<p><a href="javascript:;">在线咨询</a></p>
+						<p><a href="http://www.gdzxjy.net.cn/ms-book.html" target="_blank">在线咨询</a></p>
 						<p><router-link @click.native="Merchants('bottom')" :to="{name: 'product'}" active-class="">招商加盟</router-link></p>
 					</div>
 					<div class="footer-about fl">
@@ -316,6 +316,26 @@ footer{
 		}
 		a:hover{
 			color: #fac01b;
+		}
+	}
+}
+
+// 移动端适配
+@media screen and (max-width: 760px){
+	header{
+		.wrap{
+			width: 1100px;
+			padding: 0 50px;
+		}
+	}
+	footer{
+		.wrap{
+			width: 1100px;
+			.footer-right{
+				.footer-about{
+					margin-left: 130px;
+				}
+			}
 		}
 	}
 }
