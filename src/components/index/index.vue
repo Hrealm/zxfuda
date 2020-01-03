@@ -167,6 +167,25 @@ export default {
         }
     }
 }
+
+@media screen and (max-width: 1200px){
+    .container{
+        .banner{
+            .el-carousel__container{
+                height: 530px !important;
+            }
+        }
+    }
+}
+@media screen and (max-width: 760px){
+    .container{
+        .banner{
+            .el-carousel__container{
+                height: 485px !important;
+            }
+        }
+    }
+}
 </style>
 
 <!-- 修改局部样式 -->

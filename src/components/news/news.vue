@@ -23,11 +23,11 @@
                             </div>
                             <div class="news-content fl">
                                 <b class="news-date">{{item.fReleaseTime | releaseTime}}</b>
-                                <!-- <router-link :to="{name:'newsDetails', query:{id:item.fId}}"> -->
-                                <h2 class="news-title">{{item.fTitle}}</h2>
-                                <!-- </router-link>     -->
+                                <router-link class="router-newsTitle" :to="{name:'newsDetails', query:{id:item.fId}}" active-class="">
+                                    <h2 class="news-title">{{item.fTitle}}</h2>
+                                </router-link>    
                                 <p class="news-tags">{{item.fTags}}</p>
-                                <router-link :to="{name:'newsDetails', query:{id:item.fId}}" active-class="">
+                                <router-link class="router-more" :to="{name:'newsDetails', query:{id:item.fId}}" active-class="">
                                     <span class="news-more">MORE</span>
                                 </router-link>
                             </div>
@@ -165,7 +165,7 @@ export default {
                 li.news-item{
                     width: 1200px;
                     // padding: 10px 45px;
-                    margin-bottom: 25px;
+                    margin-bottom: 35px;
                     // margin-left: 350px;
                     // box-shadow: 0px 0px 20px rgba(0,0,0,0.1);
                     box-shadow: 2px 2px 10px rgba(0,0,0,0.05);
@@ -194,7 +194,13 @@ export default {
                                font-weight: 300;
                                font-style: normal;
                            }
+                           a.router-newsTitle{
+                               display: inline-block;
+                               color: inherit;
+                               font-size: inherit;
+                           }
                            .news-title{
+                               display: inline-block;
                                font-size: 22px;
                                color: #141a88;
                                font-weight: 400;
@@ -207,7 +213,7 @@ export default {
                                font-size: 18px;
                                line-height: 26px;
                            }
-                           a{
+                           a.router-more{
                                display: block;
                                width: 80px;
                            }
@@ -266,6 +272,7 @@ export default {
                                font-style: normal;
                            }
                            .news-title{
+                               display: inline-block;
                                font-size: 26px;
                                color: #141a88;
                                font-weight: 400;
@@ -324,6 +331,33 @@ export default {
             .news-pagination{
                 margin: 40px 0 40px;
                 text-align: center;
+            }
+        }
+    }
+}
+
+// 移动端适配
+@media screen and (max-width: 760px){
+    .container{
+        .banner{
+            .banner-text{
+                width: 1100px;
+            }
+        }
+        .latest-news{
+            .max1200{
+                width: 1100px;
+                ul{
+                    li.news-item{
+                        width: 1100px;
+                        margin-bottom: 45px;
+                        box-shadow: 0px 0px 36px rgba(0,0,0,0.1);
+                    }
+                    li.news-item:nth-child(1){
+                        width: 1050px;
+                        box-shadow: 0px 0px 36px rgba(0,0,0,0.1);
+                    }
+                }
             }
         }
     }

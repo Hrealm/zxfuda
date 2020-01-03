@@ -136,4 +136,15 @@ export default {
         }
     }
 }
+
+// 移动端适配
+@media screen and (max-width: 760px){
+    .container{
+        .news{
+            .max1200{
+                width: 1100px;
+            }
+        }
+    }
+}
 </style>
