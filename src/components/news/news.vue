@@ -200,6 +200,7 @@ export default {
                                font-size: inherit;
                            }
                            .news-title{
+                               position: relative;
                                display: inline-block;
                                font-size: 22px;
                                color: #141a88;
@@ -207,6 +208,22 @@ export default {
                                font-style: normal;
                                line-height: 31px;
                                padding: 7px 0;
+                           }
+                           .news-title::before{
+                               content: '';
+                               display: block;
+                               position: absolute;
+                               bottom: 6px;
+                               left: 100%;
+                               width: 0;
+                               z-index: 1;
+                               border-bottom: 2px solid #141a88;
+                               transition: width 350ms, left 350ms;
+                           }
+                           .news-title:hover::before{
+                               left: 0;
+                               width: 100%;
+                               transition: width 350ms;
                            }
                            .news-tags{
                                color: #999;
@@ -279,6 +296,22 @@ export default {
                                font-style: normal;
                                line-height: 34px;
                                padding: 20px 0;
+                           }
+                           .news-title::before{
+                               content: '';
+                               display: block;
+                               position: absolute;
+                               bottom: 15px;
+                               left: 100%;
+                               width: 0;
+                               z-index: 1;
+                               border-bottom: 2px solid #141a88;
+                               transition: width 350ms, left 350ms;
+                           }
+                           .news-title:hover::before{
+                               left: 0;
+                               width: 100%;
+                               transition: width 350ms;
                            }
                            .news-tags{
                                color: #999;
