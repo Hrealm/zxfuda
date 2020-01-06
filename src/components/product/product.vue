@@ -161,8 +161,8 @@ export default {
             // bannerImg: ['/static/img/product/Consignor.jpg','/static/img/product/broker.png','/static/img/product/driver.png'],
             bannerImg: {
                 'consignor': '/static/img/product/Consignor.jpg',
-                'broker': '/static/img/product/broker.png',
-                'driver': '/static/img/product/driver.png'
+                'broker': '/static/img/product/broker.jpg',
+                'driver': '/static/img/product/driver.jpg'
             },
             bannerSrc: '/static/img/product/Consignor.jpg',
             active_product: 'consignor',

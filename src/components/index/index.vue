@@ -8,7 +8,11 @@
                     <img :src="item" alt="" width="100%" height="100%">
                 </el-carousel-item>
             </el-carousel>
+            <div class="wave">
+                <img src="/static/img/indexbanner/wave.png" alt="" width="100%">
+            </div>
         </div>
+        
         <!-- banner end -->
 
         <!-- 中象集团 begin-->
@@ -132,7 +136,7 @@ import Parallax from 'parallax-js'
 export default {
     data() {
         return {
-            bannerImg: ['/static/img/indexbanner.jpg','/static/img/indexbanner.jpg','/static/img/indexbanner.jpg']
+            bannerImg: ['/static/img/indexbanner/indexbanner1.jpg','/static/img/indexbanner/indexbanner2.jpg','/static/img/indexbanner/indexbanner1.jpg']
         };
     },
     components: {},
@@ -147,8 +151,10 @@ export default {
 <style lang="scss">
 .container{
     .banner{
+        // position: relative;
         width: 100%;
         margin-top: -1px;
+        // margin-bottom: 70px;
         .el-carousel__arrow{
             width: 36px;
             height: 80px;
@@ -165,7 +171,13 @@ export default {
         .el-carousel__arrow--right{
             right: 13%;
         }
+        // .wave{
+        //     position: absolute;
+        //     bottom: -8px;
+        //     z-index: 2;
+        // }
     }
+
 }
 
 @media screen and (max-width: 1200px){
@@ -193,6 +205,15 @@ export default {
 .container{
     width: 100%;
     // height: 5000px;
+    .banner{
+        position: relative;
+        margin-bottom: 70px;
+        .wave{
+            position: absolute;
+            bottom: -8px;
+            z-index: 2;
+        }
+    }
     background-color: #fff;
     .company-des{
         width: 100%;
