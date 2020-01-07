@@ -136,7 +136,7 @@ import Parallax from 'parallax-js'
 export default {
     data() {
         return {
-            bannerImg: ['/static/img/indexbanner/indexbanner1.jpg','/static/img/indexbanner/indexbanner2.jpg','/static/img/indexbanner/indexbanner1.jpg']
+            bannerImg: ['/static/img/indexbanner/indexbanner2.jpg','/static/img/indexbanner/indexbanner1.jpg','/static/img/indexbanner/indexbanner2.jpg','/static/img/indexbanner/indexbanner1.jpg']
         };
     },
     components: {},
@@ -209,6 +209,7 @@ export default {
         position: relative;
         margin-bottom: 70px;
         .wave{
+            width: 100%;
             position: absolute;
             bottom: -8px;
             z-index: 2;
