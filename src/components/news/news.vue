@@ -19,7 +19,7 @@
                     <li class="news-item" v-for="(item,index) in newsList" :key="index">
                         <div class="news-box clearFix">
                             <div class="news-cover">
-                                <img :src="item.fImage" alt="" width="100%" height="100%">
+                                <img :src="item.fImage" alt="" width="100%" height="100%" v-lazy="item.fImage">
                             </div>
                             <div class="news-content fl">
                                 <b class="news-date">{{item.fReleaseTime | releaseTime}}</b>
@@ -71,7 +71,7 @@ export default {
         };
     },
     created(){
-        let url = 'http://192.168.0.40:8085/zxwebsite//zxnews/content/manager/newsList?page=1&pagesize=' + this.pageSize;
+        let url = '/zxwebsite//zxnews/content/manager/newsList?page=1&pagesize=' + this.pageSize;
         this.axios.get(url).then(res => {
             this.newsList = res.data.Rows;
             this.total = res.data.Total;
@@ -103,7 +103,7 @@ export default {
         },
         // 获取新闻列表
         getNewsContent(){
-            let url = 'http://192.168.0.40:8085/zxwebsite//zxnews/content/manager/newsList?page=1&pagesize=' + this.pageSize;
+            let url = '/zxwebsite//zxnews/content/manager/newsList?page=1&pagesize=' + this.pageSize;
             this.axios.get(url).then(res => {
                 let array = res.data.Rows;
                 if(this.pageSize !== 6) array.splice(0,this.pageSize-6);

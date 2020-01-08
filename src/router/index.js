@@ -20,11 +20,16 @@ Vue.use(VueSuperSlide);
 
 // 导入插件axios 挂载属性
 import Axios from 'axios'
+Axios.defaults.baseURL = 'http://192.168.0.40:8085/'
 Vue.prototype.axios = Axios;
 
 // 安装 vue-parallax-js
 // import VueParallax from 'vue-parallax-js'
 // Vue.use(VueParallax);
+
+// 懒加载
+import VueLazyload from 'vue-lazyload'
+Vue.use(VueLazyload)
 
 Vue.use(Router)
 

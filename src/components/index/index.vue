@@ -5,10 +5,11 @@
         <div class="banner">
             <el-carousel trigger="click" height="650px" indicator-position="none" >
                 <el-carousel-item v-for="(item,index) in bannerImg" :key="index">
-                    <img :src="item" alt="" width="100%" height="100%">
+                    <img :src="item" alt="" width="100%" height="100%" v-lazy="item">
                 </el-carousel-item>
             </el-carousel>
             <div class="wave">
+                <!-- <img src="/static/img/indexbanner/wave.png" alt="" width="100%"> -->
                 <img src="/static/img/indexbanner/wave.png" alt="" width="100%">
             </div>
         </div>

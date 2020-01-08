@@ -124,7 +124,7 @@
                             <div class="conApp-left fl">
                                 <el-carousel :interval="3000" type="card" height="456px" indicator-position="none">
                                     <el-carousel-item style="width:256px;" v-for="(item,index) in conAPP['driver']" :key="index">
-                                        <img :src="item" alt="" width="100%" height="100%">
+                                        <img :src="item" alt="" width="100%" height="100%" v-lazy='item'>
                                     </el-carousel-item>
                                 </el-carousel>
                             </div>
