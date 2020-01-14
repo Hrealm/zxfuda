@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="preview.css" />
+    <script src="preview.js"></script>
+    <title>图片预览</title>
+    <style type="text/css">
+        #wrap img {
+            vertical-align: top;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>点击以下图片，鼠标滚轮控制放大缩小，可拖拽移动位置</h3>
+    <div id="wrap">
+        <div class="123">
+            <img src="data/t1.png" alt="" />
+        </div>
+        <div class="sdfds">
+            <img src="data/t2.png" alt="" />
+        </div>
+        <!-- <img src="data/t3.png" alt="" />
+        <img src="data/t4.png" alt="" /> -->
+    </div>
+    
+    <script>       
+        var preview = new Preview({ 
+            imgWrap: 'wrap' /*指定该容器里的图片点击预览*/ 
+        })
+    </script>
+</body>
+
+</html>
