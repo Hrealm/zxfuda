@@ -20,7 +20,9 @@ Vue.use(VueSuperSlide);
 
 // 导入插件axios 挂载属性
 import Axios from 'axios'
-Axios.defaults.baseURL = 'http://192.168.0.40:8085/'
+// Axios.defaults.baseURL = 'http://192.168.0.215:8085/'
+// http://192.168.0.215:8085/zxwebsite/
+Axios.defaults.baseURL = 'http://mgr.gdzxjy.cn/'
 Vue.prototype.axios = Axios;
 
 // 安装 vue-parallax-js

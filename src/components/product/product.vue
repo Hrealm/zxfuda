@@ -57,7 +57,7 @@
                                 <p class="desc-txt">有货即发，海量司机一秒响应</p>
                                 <div class="dow-QRcode clearFix">
                                     <div class="QRcode fl">
-                                        <img src="/static/img/product/huozhu.png" alt="" width="100%" height="100%">
+                                        <img src="http://dl.gdzxjy.net/web/css/img/huozhu.png" alt="" width="100%" height="100%">
                                     </div>
                                     <div class="app-version fl">
                                         <p class="android"><a href="http://dl.gdzxjy.net/download/trader/TraderClient_Setup.apk">Android版下载</a></p>
@@ -95,7 +95,7 @@
                                 <p class="desc-txt">智慧整车物流交易平台引领者</p>
                                 <div class="dow-QRcode clearFix">
                                     <div class="QRcode fl">
-                                        <img src="/static/img/product/jingjiren.png" alt="" width="100%" height="100%">
+                                        <img src="http://dl.gdzxjy.net/web/css/img/jingjiren.png" alt="" width="100%" height="100%">
                                     </div>
                                     <div class="app-version fl">
                                         <p class="android"><a href="http://dl.gdzxjy.net/download/tbroker/TBrokerClient_Setup.apk">Android版下载</a></p>
@@ -133,7 +133,8 @@
                                 <p class="desc-txt">有车即运，海量货源实时更新</p>
                                 <div class="dow-QRcode clearFix">
                                     <div class="QRcode fl">
-                                        <img src="/static/img/product/huozhu.png" alt="" width="100%" height="100%">
+                                        <!-- <img src="/static/img/product/huozhu.png" alt="" width="100%" height="100%"> -->
+                                        <img src="http://dl.gdzxjy.net/web/css/img/siji.png" alt="" width="100%" height="100%">
                                     </div>
                                     <div class="app-version fl">
                                         <p class="android"><a href="http://dl.gdzxjy.net/download/driver/DriverClient_Setup.apk">Android版下载</a></p>
