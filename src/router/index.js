@@ -15,8 +15,11 @@ import 'element-ui/lib/theme-chalk/index.css'
 Vue.use(ElementUI);
 
 // 安装vue-superslide
-import VueSuperSlide from 'vue-superslide'
+import VueSuperSlide from 'vue-superslide-extend'
+// import VueSuperSlide from 'vue-superslide'
 Vue.use(VueSuperSlide);
+
+
 
 // 导入插件axios 挂载属性
 import Axios from 'axios'

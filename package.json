@@ -16,7 +16,7 @@
     "vue": "^2.5.2",
     "vue-lazyload": "^1.3.3",
     "vue-router": "^3.0.1",
-    "vue-superslide": "^0.1.1"
+    "vue-superslide-extend": "^0.1.21"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
